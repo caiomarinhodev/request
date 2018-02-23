@@ -3,6 +3,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
+from app.views import fcm
 from app.views.AcompanharView import AcompanharListView, AcompanharDetailView, LojasMotoristaListView
 from app.views.ChatView import ListChatView, get_chat, ChatPedidoView, submit_message, ChatMotoristaPedidoView
 from app.views.HomeView import DashboardView, set_feriado_admin, ListMotoristasView
@@ -51,6 +52,7 @@ urlpatterns = [
     url(r'^register-driver/$', RegisterMotoristaView.as_view(), name='register-driver'),
 
     url(r'^account/logout/$', LogoutView.as_view(), name='auth_logout'),
+    url(r'^script/bairro/$', fcm.script, name='script_bairro'),
 
     url(r'^app/pedidos/motorista/$', PedidosMotoristaListView.as_view(), name='pedidos_motorista'),
     url(r'^app/pedidos/loja/$', PedidosLojaListView.as_view(), name='pedidos_estabelecimento'),
