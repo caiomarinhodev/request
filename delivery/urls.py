@@ -43,7 +43,7 @@ Including another URLconf
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^admin/login/$', auth_views.login),
+    url(r'^admin/login/$', auth_views.login, name='login_admin'),
     url(r'^$', AppView.as_view(), name='home'),
     url(r'^dashboard/$', DashboardView.as_view(), name='dashboard'),
     url(r'^login/$', LoginView.as_view(), name='login'),

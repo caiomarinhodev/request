@@ -81,10 +81,10 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <!--<span>Focus Delivery</span>-->
             <span id="logo_1"><img src='{% static 'img/logo_png.png' %}' class="" style="max-height: 25px; "
-                                   alt="logo"/> <b>Focus </b>Delivery</span>
+                                   alt="logo"/> <b>Private</b></span>
 
             <span id="logo_2"><img src='{% static 'img/log_black.png' %}' class="" style="max-height: 60px;"
-                                   alt="logo"/> <b>Focus </b>Delivery</span>
+                                   alt="logo"/> <b>Private </b></span>
 
             <!-- logo for regular state and mobile devices -->
             <!--<span class="logo-lg"><b>Focus </b>Delivery</span>-->
@@ -404,11 +404,11 @@
                             </a>
                         </li>
                     {% endif %}
-                    <li id="lojas_credenciadas" class="motorista">
-                        <a href="{% url 'lojas_credenciadas' %}">
-                            <i class="fa fa-suitcase"></i> <span>Lojas Credenciadas</span>
-                        </a>
-                    </li>
+{#                    <li id="lojas_credenciadas" class="motorista">#}
+{#                        <a href="{% url 'lojas_credenciadas' %}">#}
+{#                            <i class="fa fa-suitcase"></i> <span>Lojas Credenciadas</span>#}
+{#                        </a>#}
+{#                    </li>#}
                     {% if user.motorista.ocupado %}
                         <li id="chat" class="motorista">
                             <a href="{% url 'chat_motorista_view' %}">
@@ -466,6 +466,11 @@
                             </a>
                         </li>
                     {% endif %}
+                    <li id="dados">
+                        <a href="{% url 'login_admin' %}">
+                            <i class="fa fa-dashboard"></i> <span>Banco de Dados</span>
+                        </a>
+                    </li>
                     <li id="editar_perfil">
                         <a href="{% url 'edit_perfil_view' %}">
                             <i class="fa fa-user"></i> <span>Editar Perfil</span>
