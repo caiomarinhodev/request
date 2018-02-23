@@ -131,6 +131,7 @@ def buscar_cliente(request):
 class PedidoCreateView(LoginRequiredMixin, CreateView, CustomContextMixin):
     model = Pedido
     success_url = '/app/pedidos/loja/'
+    login_url = '/login/'
     fields = ['estabelecimento', 'is_draft']
     template_name = 'pedidos/add_pedido.html'
 
