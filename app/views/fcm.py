@@ -9,7 +9,7 @@ def func():
     messageTitle = "Pedido Novo Focus Delivery"
     messageBody = "Tem um novo pedido no aplicativo"
 
-    data = {"to": "/topics/news",
+    data = {"to": "/topics/dcher",
             "notification": {"body": messageBody, "title": messageTitle, "icon": "ic_cloud_white_48dp",
                              "sound": "default"}}
 
